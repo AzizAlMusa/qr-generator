@@ -251,6 +251,7 @@ input[type="file"] {
   height: auto;
   width: 50%;
 }
+
 .error-message {
   position: absolute;
   top: 50%;
@@ -263,10 +264,13 @@ input[type="file"] {
 
 .qr-canvas {
   display: none;
+  width: 100%;
 }
 
 .img-container {
+  display: none;
   position: relative;
+  width: 100%;
 }
 
 #download-btn {

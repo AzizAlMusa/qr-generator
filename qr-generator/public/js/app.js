@@ -71,7 +71,7 @@ qrForm.addEventListener("submit", (event) => {
         //Remove placer holder and append svg qr code
         placeholderImg.style.display = "none";
         imgContainer.appendChild(qrImg);
-
+        imgContainer.style.display = "block";
         //Show download Button
         downloadLink.style.display = "block";
         downloadButton.style.display = "block";
