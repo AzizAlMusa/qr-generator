@@ -24,13 +24,11 @@ const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
 qrForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const text = qrInput.value;
+  const text = encodeURIComponent(qrInput.value);
   const foregroundColor = foregroundInput.value.slice(1, 7);
   const backgroundColor = backgroundInput.value.slice(1, 7);
-  if (text.length === 0) {
-  }
 
-  url = "/convert?plainText=" + text + "&color=" + foregroundColor + "&bgcolor=" + backgroundColor;
+  url = `/convert?plainText=${text}&color=${foregroundColor}&bgcolor=${backgroundColor}`;
 
   fetch(url).then((response) => {
     response.json().then((qrMessage) => {
